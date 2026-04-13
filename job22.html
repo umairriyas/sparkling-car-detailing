@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./job.css" />
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -71,13 +71,10 @@
       </div>
     </nav>
 
-    <!-- JOB HERO -->
+    <!-- ═══ JOB HERO ═══ -->
     <section class="job-hero">
       <div class="job-hero-bg">
-        <img
-          src="./images/gallery/job22-after-1.jpg"
-          alt="Detail Job #22 After"
-        />
+        <img src="./images/gallery/job22/after-1.webp" alt="Detail Job #22" />
       </div>
       <div class="job-hero-overlay"></div>
       <div class="container">
@@ -85,7 +82,6 @@
           <a href="gallery.html" class="job-back-btn">
             <i class="fas fa-arrow-left"></i> Back to Gallery
           </a>
-
           <div class="job-hero-text">
             <span class="job-hero-badge">Detail Job #22</span>
             <h1 class="job-hero-title">
@@ -96,167 +92,442 @@
               mobile
             </p>
           </div>
-
           <div class="job-hero-stats">
             <div class="job-stat">
-              <i class="fas fa-camera"></i>
-              <span>2 Before Photos</span>
+              <i class="fas fa-camera"></i><span>10 Before Photos</span>
             </div>
             <div class="job-stat">
-              <i class="fas fa-star"></i>
-              <span>2 After Photos</span>
+              <i class="fas fa-star"></i><span>10 After Photos</span>
             </div>
             <div class="job-stat">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Melbourne, VIC</span>
+              <i class="fas fa-map-marker-alt"></i><span>Melbourne, VIC</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- DRAG SLIDER SECTION -->
-    <section class="job-slider-section py-5">
+    <!-- ═══ BEFORE PHOTOS ═══ -->
+    <section class="job-photos-section before-section">
       <div class="container">
-        <div class="section-header text-center mb-4">
-          <h2 class="section-title">Comparison Slider</h2>
-          <div class="title-underline"></div>
-          <p class="section-subtitle">
-            Drag the handle left or right to compare
-          </p>
-        </div>
-
-        <div class="slider-tabs">
-          <button class="slider-tab active" data-pair="0">
-            <i class="fas fa-images"></i> Comparison 1
-          </button>
-          <button class="slider-tab" data-pair="1">
-            <i class="fas fa-images"></i> Comparison 2
-          </button>
-        </div>
-
-        <div class="ba-slider" id="baSlider">
-          <div class="ba-before-layer">
-            <img src="" alt="Before detailing" id="baBeforeImg" />
-            <div class="ba-chip ba-chip-before">
-              <span class="ba-chip-dot"></span> Before
-            </div>
-          </div>
-
-          <div class="ba-after-layer" id="baAfterLayer">
-            <img src="" alt="After detailing" id="baAfterImg" />
-            <div class="ba-chip ba-chip-after">
-              <i class="fas fa-star"></i> After
-            </div>
-          </div>
-
-          <div class="ba-handle" id="baHandle">
-            <div class="ba-handle-bar"></div>
-            <div class="ba-handle-knob">
-              <i class="fas fa-chevron-left"></i>
-              <i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="ba-handle-bar"></div>
-          </div>
-
-          <div class="ba-drag-hint" id="baDragHint">
-            <i class="fas fa-arrows-left-right"></i>
-            <span>Drag to compare</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BEFORE PHOTOS -->
-    <section class="job-photos-section py-5 before-section">
-      <div class="container">
-        <div class="section-header text-center mb-4">
-          <div class="before-section-badge">
-            <span class="before-dot"></span> Before Detailing
-          </div>
+        <div class="section-header text-center">
+          <span class="section-badge before-badge"
+            ><span class="before-dot"></span> Before Detailing</span
+          >
           <h2 class="section-title">Before Photos</h2>
           <div class="title-underline"></div>
           <p class="section-subtitle">
             The vehicle condition before our service
           </p>
         </div>
-
-        <div class="job-photos-grid">
-          <div class="job-photo-card">
-            <div class="job-photo-wrap">
+        <div class="photos-grid" id="beforeGrid">
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/before-1.webp"
+            data-section="before"
+            data-index="0"
+          >
+            <div class="photo-wrap">
               <img
-                src="./images/gallery/job22-before-1.jpg"
-                alt="Detail Job #22 Before — Photo 1"
+                src="./images/gallery/job22/before-1.webp"
+                alt="Before — Photo 1"
                 loading="lazy"
               />
-              <div class="job-photo-label before-label">
-                <span class="before-dot"></span> Before · Photo 1
-              </div>
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label"
+                ><span class="before-dot"></span> Before · 1</span
+              >
             </div>
           </div>
-
-          <div class="job-photo-card">
-            <div class="job-photo-wrap">
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/before-2.webp"
+            data-section="before"
+            data-index="1"
+          >
+            <div class="photo-wrap">
               <img
-                src="./images/gallery/job22-before-2.jpg"
-                alt="Detail Job #22 Before — Photo 2"
+                src="./images/gallery/job22/before-2.webp"
+                alt="Before — Photo 2"
                 loading="lazy"
               />
-              <div class="job-photo-label before-label">
-                <span class="before-dot"></span> Before · Photo 2
-              </div>
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label"
+                ><span class="before-dot"></span> Before · 2</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/before-3.webp"
+            data-section="before"
+            data-index="2"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/before-3.webp"
+                alt="Before — Photo 3"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label"
+                ><span class="before-dot"></span> Before · 3</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/before-4.webp"
+            data-section="before"
+            data-index="3"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/before-4.webp"
+                alt="Before — Photo 4"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label"
+                ><span class="before-dot"></span> Before · 4</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/before-5.webp"
+            data-section="before"
+            data-index="4"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/before-5.webp"
+                alt="Before — Photo 5"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label"
+                ><span class="before-dot"></span> Before · 5</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/before-6.webp"
+            data-section="before"
+            data-index="5"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/before-6.webp"
+                alt="Before — Photo 6"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label"
+                ><span class="before-dot"></span> Before · 6</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/before-7.webp"
+            data-section="before"
+            data-index="6"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/before-7.webp"
+                alt="Before — Photo 7"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label"
+                ><span class="before-dot"></span> Before · 7</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/before-8.webp"
+            data-section="before"
+            data-index="7"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/before-8.webp"
+                alt="Before — Photo 8"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label"
+                ><span class="before-dot"></span> Before · 8</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/before-9.webp"
+            data-section="before"
+            data-index="8"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/before-9.webp"
+                alt="Before — Photo 9"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label"
+                ><span class="before-dot"></span> Before · 9</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/before-10.webp"
+            data-section="before"
+            data-index="9"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/before-10.webp"
+                alt="Before — Photo 10"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label"
+                ><span class="before-dot"></span> Before · 10</span
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- AFTER PHOTOS -->
-    <section class="job-photos-section py-5 after-section">
+    <!-- ═══ AFTER PHOTOS ═══ -->
+    <section class="job-photos-section after-section">
       <div class="container">
-        <div class="section-header text-center mb-4">
-          <div class="after-section-badge">
-            <i class="fas fa-star"></i> After Detailing
-          </div>
+        <div class="section-header text-center">
+          <span class="section-badge after-badge"
+            ><i class="fas fa-star"></i> After Detailing</span
+          >
           <h2 class="section-title">After Photos</h2>
-          <div class="title-underline"></div>
+          <div class="title-underline title-underline-gold"></div>
           <p class="section-subtitle">
             The stunning result after our professional service
           </p>
         </div>
-
-        <div class="job-photos-grid">
-          <div class="job-photo-card">
-            <div class="job-photo-wrap">
+        <div class="photos-grid" id="afterGrid">
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/after-1.webp"
+            data-section="after"
+            data-index="0"
+          >
+            <div class="photo-wrap">
               <img
-                src="./images/gallery/job22-after-1.jpg"
-                alt="Detail Job #22 After — Photo 1"
+                src="./images/gallery/job22/after-1.webp"
+                alt="After — Photo 1"
                 loading="lazy"
               />
-              <div class="job-photo-label after-label">
-                <i class="fas fa-star"></i> After · Photo 1
-              </div>
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label after-label"
+                ><i class="fas fa-star"></i> After · 1</span
+              >
             </div>
           </div>
-
-          <div class="job-photo-card">
-            <div class="job-photo-wrap">
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/after-2.webp"
+            data-section="after"
+            data-index="1"
+          >
+            <div class="photo-wrap">
               <img
-                src="./images/gallery/job22-after-2.jpg"
-                alt="Detail Job #22 After — Photo 2"
+                src="./images/gallery/job22/after-2.webp"
+                alt="After — Photo 2"
                 loading="lazy"
               />
-              <div class="job-photo-label after-label">
-                <i class="fas fa-star"></i> After · Photo 2
-              </div>
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label after-label"
+                ><i class="fas fa-star"></i> After · 2</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/after-3.webp"
+            data-section="after"
+            data-index="2"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/after-3.webp"
+                alt="After — Photo 3"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label after-label"
+                ><i class="fas fa-star"></i> After · 3</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/after-4.webp"
+            data-section="after"
+            data-index="3"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/after-4.webp"
+                alt="After — Photo 4"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label after-label"
+                ><i class="fas fa-star"></i> After · 4</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/after-5.webp"
+            data-section="after"
+            data-index="4"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/after-5.webp"
+                alt="After — Photo 5"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label after-label"
+                ><i class="fas fa-star"></i> After · 5</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/after-6.webp"
+            data-section="after"
+            data-index="5"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/after-6.webp"
+                alt="After — Photo 6"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label after-label"
+                ><i class="fas fa-star"></i> After · 6</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/after-7.webp"
+            data-section="after"
+            data-index="6"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/after-7.webp"
+                alt="After — Photo 7"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label after-label"
+                ><i class="fas fa-star"></i> After · 7</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/after-8.webp"
+            data-section="after"
+            data-index="7"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/after-8.webp"
+                alt="After — Photo 8"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label after-label"
+                ><i class="fas fa-star"></i> After · 8</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/after-9.webp"
+            data-section="after"
+            data-index="8"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/after-9.webp"
+                alt="After — Photo 9"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label after-label"
+                ><i class="fas fa-star"></i> After · 9</span
+              >
+            </div>
+          </div>
+          <div
+            class="photo-item"
+            data-src="./images/gallery/job22/after-10.webp"
+            data-section="after"
+            data-index="9"
+          >
+            <div class="photo-wrap">
+              <img
+                src="./images/gallery/job22/after-10.webp"
+                alt="After — Photo 10"
+                loading="lazy"
+              />
+              <div class="photo-overlay"><i class="fas fa-expand"></i></div>
+              <span class="photo-label after-label"
+                ><i class="fas fa-star"></i> After · 10</span
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PREV / NEXT NAVIGATION -->
-    <section class="job-nav-section py-4">
+    <!-- ═══ LIGHTBOX ═══ -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-overlay" id="lightboxOverlay"></div>
+      <div class="lightbox-content">
+        <button class="lightbox-close" id="lightboxClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" id="lightboxPrev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="lightbox-img-wrap">
+          <img src="" alt="" id="lightboxImg" />
+          <div class="lightbox-loader" id="lightboxLoader">
+            <i class="fas fa-spinner fa-spin"></i>
+          </div>
+        </div>
+        <button class="lightbox-next" id="lightboxNext">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+
+    <!-- ═══ PREV / NEXT NAV ═══ -->
+    <section class="job-nav-section">
       <div class="container">
         <div class="job-nav-row">
           <a href="job21.html" class="job-nav-btn job-nav-prev">
@@ -283,7 +554,7 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- ═══ CTA ═══ -->
     <section class="cta-section py-5">
       <div class="container">
         <div class="cta-content text-center">
@@ -313,7 +584,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ═══ FOOTER ═══ -->
     <footer class="footer py-5">
       <div class="container">
         <div class="row g-4">
@@ -326,24 +597,21 @@
               <a
                 href="https://www.facebook.com/share/1B7hzwCZS5/"
                 target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
+                ><i class="fab fa-facebook-f"></i
+              ></a>
               <a
                 href="https://www.instagram.com/sparkling_mobile_car_detailing?igsh=bzFnYXZ1YzNmMnY1"
                 target="_blank"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
+                ><i class="fab fa-instagram"></i
+              ></a>
               <a
                 href="https://www.tiktok.com/@sparklingmobilecardetail?_t=ZS-8zKZ2dFxHZH&_r=1"
                 target="_blank"
-              >
-                <i class="fab fa-tiktok"></i>
-              </a>
-              <a href="https://wa.me/61481580062" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-              </a>
+                ><i class="fab fa-tiktok"></i
+              ></a>
+              <a href="https://wa.me/61481580062" target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
             </div>
           </div>
           <div class="col-lg-2 col-md-6">
@@ -411,6 +679,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./script.js"></script>
-    <script src="./job.js" data-job="22"></script>
+    <script src="./job.js"></script>
   </body>
 </html>
