@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Job #22 | Sparkling Car Detailing Melbourne</title>
+    <meta
+      name="description"
+      content="Before and after photos of Detail Job #22 by Sparkling Car Detailing Melbourne. Professional interior and exterior car detailing."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./job.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="./images/logo-new.png"
+            alt="Sparkling Car Detailing"
+            class="navbar-logo-only"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn-book"
+                href="https://booking.octopuspro.com/customerPortal/sparklingcardetailing/18890"
+                >Book Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- JOB HERO -->
+    <section class="job-hero">
+      <div class="job-hero-bg">
+        <img
+          src="./images/gallery/job22-after-1.jpg"
+          alt="Detail Job #22 After"
+        />
+      </div>
+      <div class="job-hero-overlay"></div>
+      <div class="container">
+        <div class="job-hero-content">
+          <a href="gallery.html" class="job-back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Gallery
+          </a>
+
+          <div class="job-hero-text">
+            <span class="job-hero-badge">Detail Job #22</span>
+            <h1 class="job-hero-title">
+              Full Car Detailing — Before &amp; After
+            </h1>
+            <p class="job-hero-sub">
+              Melbourne's professional car detailing service — workshop &amp;
+              mobile
+            </p>
+          </div>
+
+          <div class="job-hero-stats">
+            <div class="job-stat">
+              <i class="fas fa-camera"></i>
+              <span>2 Before Photos</span>
+            </div>
+            <div class="job-stat">
+              <i class="fas fa-star"></i>
+              <span>2 After Photos</span>
+            </div>
+            <div class="job-stat">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Melbourne, VIC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DRAG SLIDER SECTION -->
+    <section class="job-slider-section py-5">
+      <div class="container">
+        <div class="section-header text-center mb-4">
+          <h2 class="section-title">Comparison Slider</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Drag the handle left or right to compare
+          </p>
+        </div>
+
+        <div class="slider-tabs">
+          <button class="slider-tab active" data-pair="0">
+            <i class="fas fa-images"></i> Comparison 1
+          </button>
+          <button class="slider-tab" data-pair="1">
+            <i class="fas fa-images"></i> Comparison 2
+          </button>
+        </div>
+
+        <div class="ba-slider" id="baSlider">
+          <div class="ba-before-layer">
+            <img src="" alt="Before detailing" id="baBeforeImg" />
+            <div class="ba-chip ba-chip-before">
+              <span class="ba-chip-dot"></span> Before
+            </div>
+          </div>
+
+          <div class="ba-after-layer" id="baAfterLayer">
+            <img src="" alt="After detailing" id="baAfterImg" />
+            <div class="ba-chip ba-chip-after">
+              <i class="fas fa-star"></i> After
+            </div>
+          </div>
+
+          <div class="ba-handle" id="baHandle">
+            <div class="ba-handle-bar"></div>
+            <div class="ba-handle-knob">
+              <i class="fas fa-chevron-left"></i>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="ba-handle-bar"></div>
+          </div>
+
+          <div class="ba-drag-hint" id="baDragHint">
+            <i class="fas fa-arrows-left-right"></i>
+            <span>Drag to compare</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE PHOTOS -->
+    <section class="job-photos-section py-5 before-section">
+      <div class="container">
+        <div class="section-header text-center mb-4">
+          <div class="before-section-badge">
+            <span class="before-dot"></span> Before Detailing
+          </div>
+          <h2 class="section-title">Before Photos</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            The vehicle condition before our service
+          </p>
+        </div>
+
+        <div class="job-photos-grid">
+          <div class="job-photo-card">
+            <div class="job-photo-wrap">
+              <img
+                src="./images/gallery/job22-before-1.jpg"
+                alt="Detail Job #22 Before — Photo 1"
+                loading="lazy"
+              />
+              <div class="job-photo-label before-label">
+                <span class="before-dot"></span> Before · Photo 1
+              </div>
+            </div>
+          </div>
+
+          <div class="job-photo-card">
+            <div class="job-photo-wrap">
+              <img
+                src="./images/gallery/job22-before-2.jpg"
+                alt="Detail Job #22 Before — Photo 2"
+                loading="lazy"
+              />
+              <div class="job-photo-label before-label">
+                <span class="before-dot"></span> Before · Photo 2
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AFTER PHOTOS -->
+    <section class="job-photos-section py-5 after-section">
+      <div class="container">
+        <div class="section-header text-center mb-4">
+          <div class="after-section-badge">
+            <i class="fas fa-star"></i> After Detailing
+          </div>
+          <h2 class="section-title">After Photos</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            The stunning result after our professional service
+          </p>
+        </div>
+
+        <div class="job-photos-grid">
+          <div class="job-photo-card">
+            <div class="job-photo-wrap">
+              <img
+                src="./images/gallery/job22-after-1.jpg"
+                alt="Detail Job #22 After — Photo 1"
+                loading="lazy"
+              />
+              <div class="job-photo-label after-label">
+                <i class="fas fa-star"></i> After · Photo 1
+              </div>
+            </div>
+          </div>
+
+          <div class="job-photo-card">
+            <div class="job-photo-wrap">
+              <img
+                src="./images/gallery/job22-after-2.jpg"
+                alt="Detail Job #22 After — Photo 2"
+                loading="lazy"
+              />
+              <div class="job-photo-label after-label">
+                <i class="fas fa-star"></i> After · Photo 2
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREV / NEXT NAVIGATION -->
+    <section class="job-nav-section py-4">
+      <div class="container">
+        <div class="job-nav-row">
+          <a href="job21.html" class="job-nav-btn job-nav-prev">
+            <i class="fas fa-chevron-left"></i>
+            <div class="job-nav-text">
+              <span class="job-nav-label">Previous</span>
+              <span class="job-nav-title">Detail Job #21</span>
+            </div>
+          </a>
+
+          <a href="gallery.html" class="job-nav-home">
+            <i class="fas fa-th-large"></i>
+            <span>All Jobs</span>
+          </a>
+
+          <a href="job23.html" class="job-nav-btn job-nav-next">
+            <div class="job-nav-text">
+              <span class="job-nav-label">Next</span>
+              <span class="job-nav-title">Detail Job #23</span>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+      <div class="container">
+        <div class="cta-content text-center">
+          <h2>Want Results Like These?</h2>
+          <p>
+            Book your premium detailing service today and experience the
+            Sparkling difference
+          </p>
+          <div class="cta-buttons">
+            <a
+              href="https://booking.octopuspro.com/customerPortal/sparklingcardetailing/18890"
+              class="btn btn-light btn-lg me-3"
+            >
+              <i class="fas fa-calendar-check"></i> Book Now
+            </a>
+            <a
+              href="https://wa.me/61481580062"
+              class="btn btn-outline-light btn-lg me-3"
+            >
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="tel:0481580062" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-phone"></i> Call Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <p class="footer-description">
+              Melbourne's premier mobile car detailing service.
+              Professional-grade care at your doorstep.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/1B7hzwCZS5/"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/sparkling_mobile_car_detailing?igsh=bzFnYXZ1YzNmMnY1"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@sparklingmobilecardetail?_t=ZS-8zKZ2dFxHZH&_r=1"
+                target="_blank"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a href="https://wa.me/61481580062" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-heading">Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-heading">Our Services</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="service.html#ceramic-coating">Ceramic Coating</a>
+              </li>
+              <li>
+                <a href="service.html#full-detail">Full Detailing Package</a>
+              </li>
+              <li>
+                <a href="service.html#interior-detail">Interior Detailing</a>
+              </li>
+              <li>
+                <a href="service.html#exterior-detail">Exterior Detailing</a>
+              </li>
+              <li><a href="service.html#cut-polish">Cut &amp; Polish</a></li>
+              <li>
+                <a href="service.html#headlight-restoration"
+                  >Headlight Restoration</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-heading">Contact Info</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 3 / 29 Chester Road,
+                Altona, VIC 3018
+              </li>
+              <li><i class="fas fa-phone"></i> 0481 580 062</li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                info@sparklingcardetailing.com.au
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <div class="text-center">
+          <p class="footer-copyright">
+            &copy; 2026 Sparkling Car Detailing. All rights reserved. | Designed
+            with <i class="fas fa-heart"></i> in Melbourne
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./job.js" data-job="22"></script>
+  </body>
+</html>

@@ -1,0 +1,1219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Sparkling Car Detailing Melbourne</title>
+    <meta
+      name="description"
+      content="Browse our before and after gallery of 29 professional car detailing jobs in Melbourne."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./gallery.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="./images/logo-new.png"
+            alt="Sparkling Car Detailing"
+            class="navbar-logo-only"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="gallery.html">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-book" href="contact.html">Book Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- GALLERY HERO -->
+    <section class="hero-section">
+      <!-- Video Background - SINGLE VIDEO -->
+      <div class="hero-video-wrapper">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          id="heroVideo"
+          class="hero-video"
+        >
+          <!-- This is the SAME video in different formats for compatibility -->
+          <source src="./video/hero.mp4" type="video/mp4" />
+          <source src="./videos/hero-video.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Dark Overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- Video Control Button -->
+      <button class="video-control" id="videoControl" aria-label="Pause video">
+        <i class="fas fa-pause"></i>
+      </button>
+
+      <!-- Hero Content - CENTERED -->
+      <div class="container">
+        <div class="row align-items-center justify-content-center min-vh-100">
+          <div class="col-lg-10 col-xl-8 hero-content text-center">
+            <h1 class="hero-title animate-fade-in">Premium Car Detailing</h1>
+            <p class="hero-subtitle animate-fade-in-delay-1">
+              Melbourne’s Trusted Car Detailing Service
+            </p>
+
+            <div class="hero-stats animate-fade-in-delay-4">
+              <div class="stat-item">
+                <i class="fas fa-warehouse"></i>
+                <span>Workshop Dropoff</span>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Mobile Service</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <section class="gallery-filter-bar">
+      <div class="container">
+        <div class="filter-wrap">
+          <span class="filter-label"
+            ><i class="fas fa-filter"></i> Filter:</span
+          >
+          <div class="filter-tabs" id="filterTabs">
+            <button class="filter-tab active" data-filter="all">
+              All Jobs <span class="f-count">29</span>
+            </button>
+            <button class="filter-tab" data-filter="1-10">
+              Jobs 1–10 <span class="f-count">10</span>
+            </button>
+            <button class="filter-tab" data-filter="11-20">
+              Jobs 11–20 <span class="f-count">10</span>
+            </button>
+            <button class="filter-tab" data-filter="21-29">
+              Jobs 21–29 <span class="f-count">9</span>
+            </button>
+          </div>
+          <span class="gallery-showing" id="galleryShowing"
+            >Showing 29 jobs</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <section class="gallery-grid-section">
+      <div class="container">
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- JOBS 1–29 -->
+          <!-- Job 1 -->
+          <div class="job-card" data-group="1-10">
+            <a href="job1.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job1/after-1.webp"
+                  alt="Detail Job #1"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#01</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #1</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="job-card" data-group="1-10">
+            <a href="job2.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job2/after-1.webp"
+                  alt="Detail Job #2"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#02</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #2</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 3 -->
+          <div class="job-card" data-group="1-10">
+            <a href="job3.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job3/after-1.webp"
+                  alt="Detail Job #3"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#03</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #3</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 4 -->
+          <div class="job-card" data-group="1-10">
+            <a href="job4.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job4/after-1.webp"
+                  alt="Detail Job #4"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#04</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #4</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 5 -->
+          <div class="job-card" data-group="1-10">
+            <a href="job5.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job5/after-1.webp"
+                  alt="Detail Job #5"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#05</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #5</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 6 -->
+          <div class="job-card" data-group="1-10">
+            <a href="job6.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job6/after-1.webp"
+                  alt="Detail Job #6"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#06</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #6</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 7 -->
+          <div class="job-card" data-group="1-10">
+            <a href="job7.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job7/after-1.webp"
+                  alt="Detail Job #7"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#07</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #7</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 8 -->
+          <div class="job-card" data-group="1-10">
+            <a href="job8.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job8/after-1.webp"
+                  alt="Detail Job #8"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#08</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #8</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 9 -->
+          <div class="job-card" data-group="1-10">
+            <a href="job9.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job9/after-1.webp"
+                  alt="Detail Job #9"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#09</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #9</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 10 -->
+          <div class="job-card" data-group="1-10">
+            <a href="job10.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job10/after-1.webp"
+                  alt="Detail Job #10"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#10</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #10</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 11 -->
+          <div class="job-card" data-group="11-20">
+            <a href="job11.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job11/after-1.webp"
+                  alt="Detail Job #11"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#11</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #11</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 12 -->
+          <div class="job-card" data-group="11-20">
+            <a href="job12.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job12/after-1.webp"
+                  alt="Detail Job #12"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#12</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #12</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 13 -->
+          <div class="job-card" data-group="11-20">
+            <a href="job13.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job13/after-1.webp"
+                  alt="Detail Job #13"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#13</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #13</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 14 -->
+          <div class="job-card" data-group="11-20">
+            <a href="job14.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job14/after-1.webp"
+                  alt="Detail Job #14"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#14</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #14</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 15 -->
+          <div class="job-card" data-group="11-20">
+            <a href="job15.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job15/after-1.webp"
+                  alt="Detail Job #15"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#15</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #15</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 16 -->
+          <div class="job-card" data-group="11-20">
+            <a href="job16.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job16/after-1.webp"
+                  alt="Detail Job #16"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#16</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #16</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 17 -->
+          <div class="job-card" data-group="11-20">
+            <a href="job17.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job17/after-1.webp"
+                  alt="Detail Job #17"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#17</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #17</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 18 -->
+          <div class="job-card" data-group="11-20">
+            <a href="job18.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job18/after-1.webp"
+                  alt="Detail Job #18"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#18</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #18</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 19 -->
+          <div class="job-card" data-group="11-20">
+            <a href="job19.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job19/after-1.webp"
+                  alt="Detail Job #19"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#19</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #19</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 20 -->
+          <div class="job-card" data-group="11-20">
+            <a href="job20.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job20/after-1.webp"
+                  alt="Detail Job #20"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#20</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #20</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 21 -->
+          <div class="job-card" data-group="21-29">
+            <a href="job21.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job21/after-1.webp"
+                  alt="Detail Job #21"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#21</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #21</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 22 -->
+          <div class="job-card" data-group="21-29">
+            <a href="job22.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job22/after-1.webp"
+                  alt="Detail Job #22"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#22</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #22</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 23 -->
+          <div class="job-card" data-group="21-29">
+            <a href="job23.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job23/after-1.webp"
+                  alt="Detail Job #23"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#23</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #23</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 24 -->
+          <div class="job-card" data-group="21-29">
+            <a href="job24.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job24/after-1.webp"
+                  alt="Detail Job #24"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#24</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #24</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 25 -->
+          <div class="job-card" data-group="21-29">
+            <a href="job25.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job25/after-1.webp"
+                  alt="Detail Job #25"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#25</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #25</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 26 -->
+          <div class="job-card" data-group="21-29">
+            <a href="job26.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job26/after-1.webp"
+                  alt="Detail Job #26"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#26</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #26</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 27 -->
+          <div class="job-card" data-group="21-29">
+            <a href="job27.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job27/after-1.webp"
+                  alt="Detail Job #27"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#27</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #27</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 28 -->
+          <div class="job-card" data-group="21-29">
+            <a href="job28.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job28/after-1.webp"
+                  alt="Detail Job #28"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#28</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #28</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Job 29 -->
+          <div class="job-card" data-group="21-29">
+            <a href="job29.html" class="job-card-inner">
+              <div class="job-card-img-wrap">
+                <img
+                  src="./images/gallery/job29/after-1.webp"
+                  alt="Detail Job #29"
+                  loading="lazy"
+                />
+                <div class="job-card-overlay">
+                  <span class="view-btn"
+                    ><i class="fas fa-eye"></i> View Job</span
+                  >
+                </div>
+                <span class="job-num-badge">#29</span>
+                <span class="after-badge"
+                  ><i class="fas fa-star"></i> After</span
+                >
+              </div>
+              <div class="job-card-body">
+                <h3>Detail Job #29</h3>
+                <div class="job-meta">
+                  <span><i class="fas fa-camera"></i> 10 Before</span>
+                  <span><i class="fas fa-star"></i> 10 After</span>
+                </div>
+                <span class="job-arrow"
+                  ><i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- /.gallery-grid -->
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section py-5">
+      <div class="container">
+        <div class="cta-content text-center">
+          <h2>Ready to Transform Your Vehicle?</h2>
+          <p>
+            Book your premium detailing service today and experience the
+            Sparkling difference
+          </p>
+
+          <h2>3 Easy Ways to Book Your Detail</h2>
+          <p>Choose the option that suits you best</p>
+          <div class="cta-buttons">
+            <a
+              href="https://app.urable.com/virtual-shop/SCM3HrodRZG9eb58KdmZ"
+              class="btn btn-light btn-lg me-3"
+            >
+              <i class="fas fa-calendar-check"></i> Book Instantly
+            </a>
+
+            <a
+              href="https://wa.me/61481580062"
+              class="btn btn-outline-light btn-lg me-3"
+            >
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="tel:0481580062" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-phone"></i> Call Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <p class="footer-description">
+              Melbourne's premier mobile car detailing service.
+              Professional-grade care at your doorstep.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/1B7hzwCZS5/"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sparkling_mobile_car_detailing?igsh=bzFnYXZ1YzNmMnY1"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.tiktok.com/@sparklingmobilecardetail?_t=ZS-8zKZ2dFxHZH&_r=1"
+                target="_blank"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+              <a href="https://wa.me/61481580062" target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-heading">Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-heading">Our Services</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="service.html#ceramic-coating">Ceramic Coating</a>
+              </li>
+              <li>
+                <a href="service.html#full-detail">Full Detailing Package</a>
+              </li>
+              <li>
+                <a href="service.html#interior-detail">Interior Detailing</a>
+              </li>
+              <li>
+                <a href="service.html#exterior-detail">Exterior Detailing</a>
+              </li>
+              <li><a href="service.html#cut-polish">Cut &amp; Polish</a></li>
+              <li>
+                <a href="service.html#headlight-restoration"
+                  >Headlight Restoration</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-heading">Contact Info</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 3 / 29 Chester Road,
+                Altona, VIC 3018
+              </li>
+              <li><i class="fas fa-phone"></i> 0481 580 062</li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                info@sparklingcardetailing.com.au
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <div class="text-center">
+          <p class="footer-copyright">
+            &copy; 2026 Sparkling Car Detailing. All rights reserved. | Designed
+            with <i class="fas fa-heart"></i> in Melbourne
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./gallery.js"></script>
+  </body>
+</html>

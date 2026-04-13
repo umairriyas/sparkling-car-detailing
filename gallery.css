@@ -1,0 +1,446 @@
+/* ═══════════════════════════════════════════
+   GALLERY PAGE — gallery.css
+   White theme to match site style
+   ═══════════════════════════════════════════ */
+
+/* ─── HERO ─── */
+.gallery-hero {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #111827 50%, #0d1f1a 100%);
+  overflow: hidden;
+}
+
+.gallery-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(0, 160, 120, 0.06) 0%, transparent 60%);
+}
+
+.gallery-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 0 80px;
+}
+
+.gallery-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #d4af37;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 50px;
+  margin-bottom: 22px;
+}
+
+.gallery-hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.gallery-accent {
+  background: linear-gradient(135deg, #d4af37, #f0c040);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gallery-hero-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.68);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+/* Hero Stats */
+.gallery-hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 22px 40px;
+  max-width: 500px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+}
+
+.g-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 28px;
+}
+
+.g-stat-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #d4af37;
+  line-height: 1;
+}
+
+.g-stat-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+.g-stat-divider {
+  width: 1px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Scroll hint */
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(7px); }
+}
+
+/* ─── FILTER BAR ─── */
+.gallery-filter-bar {
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+  padding: 14px 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.filter-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  color: #888;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.filter-tab {
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-tab:hover {
+  border-color: #d4af37;
+  color: #b8952a;
+  background: #fffbf0;
+}
+
+.filter-tab.active {
+  background: #d4af37;
+  border-color: #d4af37;
+  color: #000000;
+  font-weight: 700;
+}
+
+.f-count {
+  background: rgba(0, 0, 0, 0.12);
+  color: inherit;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 50px;
+}
+
+.gallery-showing {
+  color: #aaa;
+  font-size: 0.75rem;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* ─── GALLERY GRID SECTION ─── */
+.gallery-grid-section {
+  background: #f8f8f8;
+  padding: 60px 0 80px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 991px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+}
+
+@media (max-width: 575px) {
+  .gallery-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* ─── JOB CARD ─── */
+.job-card {
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card.hidden {
+  display: none;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
+}
+
+.job-card-inner {
+  display: block;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #ebebeb;
+  height: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.job-card:hover .job-card-inner {
+  border-color: #d4af37;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.18);
+}
+
+/* Card Image */
+.job-card-img-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.job-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.job-card:hover .job-card-img-wrap img {
+  transform: scale(1.06);
+}
+
+/* Overlay on hover */
+.job-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.job-card:hover .job-card-overlay {
+  opacity: 1;
+}
+
+.view-btn {
+  background: #d4af37;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transform: translateY(8px);
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover .view-btn {
+  transform: translateY(0);
+}
+
+/* Job number badge */
+.job-num-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #d4af37;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 50px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  letter-spacing: 0.5px;
+}
+
+/* After badge */
+.after-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(22, 160, 100, 0.88);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.67rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Card Body */
+.job-card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #ffffff;
+}
+
+.job-card-body h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 5px 0;
+}
+
+.job-meta {
+  display: flex;
+  gap: 12px;
+}
+
+.job-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #888;
+  font-size: 0.71rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.job-meta span i {
+  color: #d4af37;
+  font-size: 0.63rem;
+}
+
+/* Arrow */
+.job-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fffbf0;
+  border: 1px solid #e8d88a;
+  color: #b8952a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.job-card:hover .job-arrow {
+  background: #d4af37;
+  color: #000;
+  border-color: #d4af37;
+}
+
+/* Card entrance animation */
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── MOBILE ADJUSTMENTS ─── */
+@media (max-width: 767px) {
+  .gallery-filter-bar { top: 60px; }
+  .filter-wrap { gap: 8px; }
+  .gallery-showing { display: none; }
+  .gallery-hero-stats { padding: 18px 20px; }
+  .g-stat { padding: 0 14px; }
+  .g-stat-num { font-size: 1.5rem; }
+  .gallery-grid-section { padding: 40px 0 60px; }
+}
+
+@media (max-width: 400px) {
+  .filter-tabs { gap: 6px; }
+  .filter-tab { font-size: 0.72rem; padding: 6px 12px; }
+}

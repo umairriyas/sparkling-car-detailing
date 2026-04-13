@@ -1,0 +1,2124 @@
+/* ========================
+   SERVICES PAGE SPECIFIC STYLES
+   ======================== */
+
+/* Page Header with Video Background */
+.page-header {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+/* Video Background (same as hero section) */
+.page-header .hero-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.page-header .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Dark Overlay */
+.page-header .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1rem;
+}
+
+.page-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 0.8s ease-out;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+    line-height: 1.4;
+}
+
+.breadcrumb {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    display: inline-flex;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.breadcrumb-item {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.breadcrumb-item.active {
+    color: var(--primary-color);
+}
+
+.breadcrumb-item a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Scroll Indicator */
+.page-header .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+.page-header .scroll-indicator i {
+    font-size: 2rem;
+    color: var(--white);
+    opacity: 0.7;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================
+   Pricing & Policy Section Styles - CLEAN CENTERED UI
+   ======================== */
+
+/* ========================
+   Pricing & Policy Section Styles - NO BOXES, CLEAN TEXT
+   ======================== */
+
+.pricing-policy-section {
+    background: var(--light-color);
+    padding: 5rem 0 !important;
+}
+
+.pricing-policy-section .container {
+    max-width: 1200px !important;
+    padding: 0 2rem !important;
+    margin: 0 auto !important;
+}
+
+.pricing-policy-section .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.policy-card {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    position: relative;
+    margin-bottom: 4rem;
+    text-align: center;
+    border: none;
+}
+
+.policy-card:hover {
+    box-shadow: none;
+    transform: none;
+}
+
+.policy-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: var(--white);
+    margin: 0 auto 1.5rem;
+}
+
+.policy-title {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.policy-content {
+    color: var(--text-color);
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.policy-content p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+.policy-content strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.add-on-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+}
+
+.add-on-list li {
+    padding: 1.2rem 1.5rem;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: 500;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.add-on-list li:hover {
+    transform: translateX(5px);
+}
+
+.add-on-list i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.service-option-detail {
+    background: transparent;
+    padding: 2rem 0;
+    border-radius: 0;
+    margin: 2rem auto;
+    max-width: 900px;
+    text-align: center;
+    border: none;
+}
+
+.service-option-detail h4 {
+    color: var(--dark-color);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    font-weight: 700;
+}
+
+.service-option-detail h4 i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.service-option-detail p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.workshop-location {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin: 1.5rem auto;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: none;
+    color: var(--text-color);
+}
+
+.workshop-location i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.callout-fees {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+}
+
+.callout-fees li {
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.callout-fees li:hover {
+    transform: translateX(5px);
+}
+
+.callout-fees i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.callout-fees strong {
+    color: var(--dark-color);
+}
+
+.pricing-policy-section .text-center {
+    margin-top: 3rem;
+}
+
+/* Responsive Styles for Pricing Section */
+@media (max-width: 991px) {
+    .pricing-policy-section .container {
+        padding: 0 1.5rem !important;
+    }
+    
+    .policy-card {
+        margin-bottom: 3rem;
+    }
+    
+    .policy-title {
+        font-size: 1.8rem;
+    }
+    
+    .policy-content p {
+        font-size: 1rem;
+    }
+    
+    .add-on-list {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+    
+    .callout-fees {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+    
+    .service-option-detail {
+        padding: 1.5rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .pricing-policy-section {
+        padding: 3rem 0 !important;
+    }
+    
+    .pricing-policy-section .container {
+        padding: 0 1rem !important;
+    }
+    
+    .pricing-policy-section .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    .policy-card {
+        margin-bottom: 2.5rem;
+    }
+    
+    .policy-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+    
+    .policy-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .policy-content p {
+        font-size: 0.95rem;
+    }
+    
+    .add-on-list {
+        gap: 1rem;
+    }
+    
+    .add-on-list li {
+        padding: 0;
+        font-size: 0.95rem;
+    }
+    
+    .service-option-detail {
+        padding: 1rem 0;
+    }
+    
+    .service-option-detail h4 {
+        font-size: 1.4rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .workshop-location {
+        padding: 0;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .callout-fees {
+        gap: 1rem;
+    }
+    
+    .callout-fees li {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .policy-card {
+        margin-bottom: 2rem;
+    }
+    
+    .policy-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .policy-title {
+        font-size: 1.4rem;
+    }
+    
+    .policy-content {
+        text-align: left;
+    }
+    
+    .policy-content p {
+        font-size: 0.9rem;
+    }
+    
+    .add-on-list li {
+        padding: 0;
+        font-size: 0.9rem;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .add-on-list i {
+        font-size: 1.3rem;
+    }
+    
+    .service-option-detail {
+        padding: 0.5rem 0;
+        text-align: left;
+    }
+    
+    .service-option-detail h4 {
+        font-size: 1.2rem;
+        justify-content: flex-start;
+    }
+    
+    .service-option-detail p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+    
+    .workshop-location {
+        padding: 0;
+        font-size: 0.9rem;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .callout-fees li {
+        padding: 0;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .callout-fees i {
+        font-size: 1.5rem;
+    }
+    
+    .pricing-policy-section .text-center {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .policy-title {
+        font-size: 1.3rem;
+    }
+    
+    .policy-content p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+    
+    .add-on-list li {
+        font-size: 0.85rem;
+    }
+    
+    .service-option-detail h4 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* ========================
+   Services Detail Section - FULL WIDTH
+   ======================== */
+
+.services-detail {
+    background: var(--light-color);
+    padding: 0 !important;
+}
+
+.services-detail .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.service-detail-card {
+    background: var(--white);
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--gradient-1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.service-detail-card:hover::before {
+    opacity: 1;
+}
+
+/* Highlight Card */
+.highlight-card {
+    background:lightblue;
+    border-top: 5px solid var(--light-color);
+    border-bottom: 5px solid var(--light-color);
+    position: relative;
+}
+
+.highlight-card::after {
+    content: '★';
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 4rem;
+    color: var(--accent-color);
+    opacity: 0.08;
+    z-index: 1;
+}
+
+/* Premium Card */
+.premium-card {
+    background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+    border-top: 5px solid var(--secondary-color);
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+/* Service Badge */
+.service-badge {
+    display: inline-block;
+    background: var(--gradient-1);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.service-badge.best-value {
+    background: lightblue;
+}
+
+.service-badge.premium {
+    background: var(--secondary-color);
+}
+
+/* Enhanced Service Detail Image - FULL WIDTH */
+.service-detail-image {
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    height: 100%;
+    min-height: 550px;
+}
+
+.service-detail-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    display: block;
+}
+
+.service-detail-card:hover .service-detail-image img {
+    transform: scale(1.05);
+}
+
+/* Service Icon Overlay - CHANGED TO BLUE */
+.service-icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: rgba(3, 169, 244, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: lightblue;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.service-detail-card:hover .service-icon-overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.premium-overlay {
+    background: rgba(0, 78, 137, 0.9);
+}
+
+/* Content Wrapper with Padding */
+.service-content-wrapper {
+    padding: 4rem 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Image Dark Overlay on Hover */
+.service-detail-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.service-detail-card:hover .service-detail-image::before {
+    opacity: 1;
+}
+
+/* Service Detail Title */
+.service-detail-title {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.service-detail-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+/* Service Features List */
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.service-features li {
+    padding: 0.8rem 0;
+    font-size: 1.05rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.service-features li:hover {
+    padding-left: 10px;
+    color: var(--primary-color);
+}
+
+.service-features li i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.highlight-card .service-features li i {
+    color: var(--accent-color);
+}
+
+.premium-card .service-features li i {
+    color: var(--secondary-color);
+}
+
+/* Price Tag */
+.price-tag {
+    background: var(--gradient-5);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.save-badge {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Protection Years */
+.protection-years {
+    background: rgba(0, 78, 137, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.protection-years span {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.protection-years i {
+    margin-right: 0.5rem;
+}
+
+/* Service Options Section */
+.service-options {
+    background: var(--white);
+}
+
+.section-header {
+    text-align: center;
+}
+
+.option-card {
+    background: var(--white);
+    border: 2px solid var(--light-color);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.option-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-1);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-xl);
+}
+
+.option-card:hover::before {
+    transform: scaleX(1);
+}
+
+.option-icon {
+    width: 100px;
+    height: 100px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    transition: all 0.3s ease;
+}
+
+.option-card:hover .option-icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.option-icon i {
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.option-card h3 {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.option-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.option-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.option-benefits li {
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.option-benefits li i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.address-info {
+    background: var(--light-color);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+
+.address-info i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* ========================
+   RESPONSIVE DESIGN - ALL DEVICES
+   ======================== */
+
+/* Extra Extra Large Devices (1600px and up) */
+@media (min-width: 1600px) {
+    .page-title {
+        font-size: 5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 5rem 8rem;
+    }
+    
+    .service-detail-image {
+        min-height: 600px;
+    }
+    
+    .service-detail-image img {
+        min-height: 600px;
+    }
+}
+
+/* Extra Large Devices (1400px - 1599px) */
+@media (min-width: 1400px) and (max-width: 1599px) {
+    .page-title {
+        font-size: 4.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.7rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 4.5rem 7rem;
+    }
+    
+    .service-detail-image {
+        min-height: 580px;
+    }
+    
+    .service-detail-image img {
+        min-height: 580px;
+    }
+}
+
+/* Large Devices (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .page-title {
+        font-size: 3.8rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 4rem 6rem;
+    }
+    
+    .service-detail-image {
+        min-height: 550px;
+    }
+    
+    .service-detail-image img {
+        min-height: 550px;
+    }
+}
+
+/* Medium-Large Devices (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .page-title {
+        font-size: 3.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 3.5rem 5rem;
+    }
+    
+    .service-detail-image {
+        min-height: 500px;
+    }
+    
+    .service-detail-image img {
+        min-height: 500px;
+    }
+    
+    .service-detail-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Medium Devices (992px - 1023px) */
+@media (min-width: 992px) and (max-width: 1023px) {
+    .page-title {
+        font-size: 3.2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 3rem 4rem;
+    }
+    
+    .service-detail-image {
+        min-height: 480px;
+    }
+    
+    .service-detail-image img {
+        min-height: 480px;
+    }
+    
+    .service-detail-title {
+        font-size: 2rem;
+    }
+}
+
+/* Tablets Portrait (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .page-header {
+        min-height: 80vh;
+    }
+    
+    .page-title {
+        font-size: 2.8rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 3rem;
+    }
+    
+    .service-detail-image {
+        min-height: 420px;
+    }
+    
+    .service-detail-image img {
+        min-height: 420px;
+    }
+    
+    .service-detail-title {
+        font-size: 2rem;
+    }
+    
+    .service-detail-description {
+        font-size: 1.05rem;
+    }
+    
+    .service-features li {
+        font-size: 1rem;
+    }
+    
+    .service-icon-overlay {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+    
+    .option-card {
+        padding: 2.5rem 2rem;
+    }
+    
+    .option-icon {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .option-icon i {
+        font-size: 2.8rem;
+    }
+    
+    .policy-card {
+        padding: 2rem;
+    }
+    
+    .policy-title {
+        font-size: 1.6rem;
+    }
+}
+
+/* Small Tablets (640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+    .page-header {
+        min-height: 70vh;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.15rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .page-header .scroll-indicator {
+        display: none;
+    }
+    
+    .service-content-wrapper {
+        padding: 2.5rem;
+    }
+    
+    .service-detail-image {
+        min-height: 350px;
+    }
+    
+    .service-detail-image img {
+        min-height: 350px;
+    }
+    
+    .service-detail-title {
+        font-size: 1.9rem;
+    }
+    
+    .service-detail-description {
+        font-size: 1rem;
+    }
+    
+    .service-features li {
+        font-size: 0.95rem;
+        padding: 0.7rem 0;
+    }
+    
+    .option-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .option-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .option-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .policy-card {
+        padding: 1.8rem;
+    }
+    
+    .policy-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile - Stack Images on Top */
+@media (max-width: 639px) {
+    .service-detail-image {
+        min-height: 300px;
+    }
+    
+    .service-detail-image img {
+        min-height: 300px;
+    }
+    
+    .service-content-wrapper {
+        padding: 2rem 1.5rem;
+    }
+    
+    .service-icon-overlay {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+        opacity: 1;
+    }
+    
+    .policy-card {
+        padding: 1.5rem;
+    }
+    
+    .policy-title {
+        font-size: 1.4rem;
+    }
+    
+    .service-option-detail {
+        padding: 1rem;
+    }
+}
+
+/* Mobile Landscape & Large Phones (576px - 639px) */
+@media (min-width: 576px) and (max-width: 639px) {
+    .page-header {
+        min-height: 65vh;
+    }
+    
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.05rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.88rem;
+    }
+    
+    .page-header .scroll-indicator {
+        display: none;
+    }
+    
+    .service-detail-title {
+        font-size: 1.7rem;
+    }
+    
+    .service-detail-description {
+        font-size: 0.98rem;
+    }
+    
+    .service-badge {
+        padding: 0.45rem 1.3rem;
+        font-size: 0.85rem;
+    }
+    
+    .service-features li {
+        font-size: 0.92rem;
+        padding: 0.65rem 0;
+    }
+    
+    .service-features li i {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .option-card {
+        padding: 1.8rem 1.3rem;
+    }
+    
+    .option-card h3 {
+        font-size: 1.6rem;
+    }
+    
+    .option-icon {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .option-icon i {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile Portrait - Standard (481px - 575px) */
+@media (min-width: 481px) and (max-width: 575px) {
+    .page-header {
+        min-height: 60vh;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 2rem 1.3rem;
+    }
+    
+    .service-detail-image {
+        min-height: 280px;
+    }
+    
+    .service-detail-image img {
+        min-height: 280px;
+    }
+    
+    .service-detail-title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-detail-description {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-badge {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    
+    .service-features li {
+        font-size: 0.9rem;
+        padding: 0.6rem 0;
+        gap: 0.8rem;
+    }
+    
+    .service-features li i {
+        font-size: 1rem;
+    }
+    
+    .price-tag {
+        padding: 0.8rem 1rem;
+    }
+    
+    .save-badge {
+        font-size: 1rem;
+    }
+    
+    .protection-years {
+        padding: 0.8rem 1rem;
+    }
+    
+    .protection-years span {
+        font-size: 0.95rem;
+    }
+    
+    .service-icon-overlay {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    
+    .option-card {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .option-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .option-card p {
+        font-size: 0.95rem;
+    }
+    
+    .option-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .option-icon i {
+        font-size: 2rem;
+    }
+    
+    .option-benefits li {
+        font-size: 0.92rem;
+    }
+}
+
+/* Mobile Portrait - Medium (414px - 480px) */
+@media (min-width: 414px) and (max-width: 480px) {
+    .page-header {
+        min-height: 55vh;
+    }
+    
+    .page-title {
+        font-size: 1.85rem;
+    }
+    
+    .page-subtitle {
+        font-size: 0.98rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 1.8rem 1.2rem;
+    }
+    
+    .service-detail-image {
+        min-height: 260px;
+    }
+    
+    .service-detail-image img {
+        min-height: 260px;
+    }
+    
+    .service-detail-title {
+        font-size: 1.5rem;
+    }
+    
+    .service-detail-description {
+        font-size: 0.92rem;
+    }
+    
+    .service-features li {
+        font-size: 0.88rem;
+    }
+    
+    .service-icon-overlay {
+        width: 58px;
+        height: 58px;
+        font-size: 1.7rem;
+    }
+}
+
+/* Mobile Portrait - iPhone (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+    .page-header {
+        min-height: 55vh;
+    }
+    
+    .page-title {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        letter-spacing: -0.5px;
+    }
+    
+    .page-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.3rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.55rem 1.1rem;
+        font-size: 0.82rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 1.6rem 1.1rem;
+    }
+    
+    .service-detail-image {
+        min-height: 240px;
+    }
+    
+    .service-detail-image img {
+        min-height: 240px;
+    }
+    
+    .service-detail-title {
+        font-size: 1.4rem;
+    }
+    
+    .service-detail-description {
+        font-size: 0.9rem;
+    }
+    
+    .service-badge {
+        padding: 0.38rem 1.1rem;
+        font-size: 0.78rem;
+    }
+    
+    .service-features li {
+        font-size: 0.85rem;
+        padding: 0.55rem 0;
+    }
+    
+    .service-features li i {
+        font-size: 0.95rem;
+    }
+    
+    .price-tag {
+        padding: 0.75rem 0.9rem;
+    }
+    
+    .save-badge {
+        font-size: 0.95rem;
+    }
+    
+    .protection-years {
+        padding: 0.75rem 0.9rem;
+    }
+    
+    .protection-years span {
+        font-size: 0.92rem;
+    }
+    
+    .service-icon-overlay {
+        width: 55px;
+        height: 55px;
+        font-size: 1.6rem;
+    }
+    
+    .option-card {
+        padding: 1.4rem 0.9rem;
+    }
+    
+    .option-card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .option-card p {
+        font-size: 0.9rem;
+    }
+    
+    .option-icon {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .option-icon i {
+        font-size: 1.9rem;
+    }
+    
+    .option-benefits li {
+        font-size: 0.88rem;
+        padding: 0.7rem 0;
+    }
+    
+    .address-info {
+        font-size: 0.88rem;
+        padding: 0.85rem;
+    }
+}
+
+/* Mobile Portrait - Small (360px - 374px) */
+@media (min-width: 360px) and (max-width: 374px) {
+    .page-header {
+        min-height: 50vh;
+    }
+    
+    .page-title {
+        font-size: 1.6rem;
+    }
+    
+    .page-subtitle {
+        font-size: 0.92rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 1.5rem 1rem;
+    }
+    
+    .service-detail-image {
+        min-height: 220px;
+    }
+    
+    .service-detail-image img {
+        min-height: 220px;
+    }
+    
+    .service-detail-title {
+        font-size: 1.35rem;
+    }
+    
+    .service-detail-description {
+        font-size: 0.88rem;
+    }
+    
+    .service-features li {
+        font-size: 0.82rem;
+        padding: 0.5rem 0;
+    }
+    
+    .service-icon-overlay {
+        width: 52px;
+        height: 52px;
+        font-size: 1.5rem;
+    }
+    
+    .option-card h3 {
+        font-size: 1.35rem;
+    }
+    
+    .option-benefits li {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile Portrait - Extra Small (320px - 359px) */
+@media (min-width: 320px) and (max-width: 359px) {
+    .page-header {
+        min-height: 50vh;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .page-subtitle {
+        font-size: 0.88rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.78rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 1.3rem 0.9rem;
+    }
+    
+    .service-detail-image {
+        min-height: 200px;
+    }
+    
+    .service-detail-image img {
+        min-height: 200px;
+    }
+    
+    .service-detail-title {
+        font-size: 1.3rem;
+    }
+    
+    .service-detail-description {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+    
+    .service-badge {
+        padding: 0.35rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .service-features li {
+        font-size: 0.8rem;
+        padding: 0.5rem 0;
+        gap: 0.7rem;
+    }
+    
+    .service-features li i {
+        font-size: 0.9rem;
+    }
+    
+    .price-tag {
+        padding: 0.7rem 0.8rem;
+    }
+    
+    .save-badge {
+        font-size: 0.9rem;
+    }
+    
+    .protection-years {
+        padding: 0.7rem 0.8rem;
+    }
+    
+    .protection-years span {
+        font-size: 0.88rem;
+    }
+    
+    .service-icon-overlay {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+    
+    .option-card {
+        padding: 1.2rem 0.8rem;
+    }
+    
+    .option-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .option-card p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+    
+    .option-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1.2rem;
+    }
+    
+    .option-icon i {
+        font-size: 1.8rem;
+    }
+    
+    .option-benefits li {
+        font-size: 0.82rem;
+        padding: 0.6rem 0;
+    }
+    
+    .address-info {
+        font-size: 0.82rem;
+        padding: 0.75rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* Tiny Mobile (280px - 319px) */
+@media (max-width: 319px) {
+    .page-header {
+        min-height: 45vh;
+    }
+    
+    .page-title {
+        font-size: 1.35rem;
+    }
+    
+    .page-subtitle {
+        font-size: 0.82rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.45rem 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 1.2rem 0.8rem;
+    }
+    
+    .service-detail-image {
+        min-height: 180px;
+    }
+    
+    .service-detail-image img {
+        min-height: 180px;
+    }
+    
+    .service-detail-title {
+        font-size: 1.2rem;
+    }
+    
+    .service-detail-description {
+        font-size: 0.82rem;
+    }
+    
+    .service-features li {
+        font-size: 0.78rem;
+    }
+    
+    .service-icon-overlay {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+    }
+    
+    .option-card h3 {
+        font-size: 1.15rem;
+    }
+    
+    .option-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .option-icon i {
+        font-size: 1.6rem;
+    }
+}
+
+/* Landscape Mode - Mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+    .page-header {
+        min-height: 100vh;
+        padding: 120px 0 60px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .page-header .scroll-indicator {
+        display: none;
+    }
+    
+    .service-content-wrapper {
+        padding: 2rem 1.5rem;
+    }
+    
+    .service-detail-image {
+        min-height: 300px;
+    }
+    
+    .service-detail-image img {
+        min-height: 300px;
+    }
+    
+    .service-features li {
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* Very Short Screens in Landscape */
+@media (max-height: 450px) and (orientation: landscape) {
+    .page-header {
+        padding: 100px 0 40px;
+    }
+    
+    .page-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .page-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .breadcrumb {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .service-content-wrapper {
+        padding: 1.5rem 1.2rem;
+    }
+    
+    .service-detail-image {
+        min-height: 250px;
+    }
+    
+    .service-detail-image img {
+        min-height: 250px;
+    }
+}
+
+/* High DPI Displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .page-title,
+    .page-subtitle,
+    .service-detail-title,
+    .service-detail-description {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .page-header .hero-video {
+        animation: none;
+    }
+    
+    .page-title,
+    .page-subtitle,
+    .breadcrumb {
+        animation: none !important;
+    }
+    
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .page-header {
+        min-height: auto;
+        padding: 2rem 0;
+        page-break-after: always;
+    }
+    
+    .page-header .hero-video-wrapper,
+    .page-header .hero-overlay,
+    .breadcrumb,
+    .btn,
+    .option-icon,
+    .page-header .scroll-indicator {
+        display: none;
+    }
+    
+    .service-detail-card {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-detail-image {
+        height: auto;
+        min-height: 150px;
+        border: 1px solid #ddd;
+    }
+    
+    .service-detail-image img {
+        min-height: 150px;
+    }
+    
+    .service-features li {
+        page-break-inside: avoid;
+    }
+    
+    .option-card {
+        page-break-inside: avoid;
+        border: 1px solid #ddd;
+    }
+    
+    .policy-card {
+        page-break-inside: avoid;
+        border: 1px solid #ddd;
+    }
+}
+/* ========================
+   SERVICE PRICE & TIME BAR
+   ======================== */
+
+.service-price-time-bar {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: var(--light-color);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.8rem;
+    border: 1px solid rgba(3, 169, 244, 0.15);
+}
+
+.price-time-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex: 1;
+}
+
+.price-time-item > i {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.price-time-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-time-item .label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+}
+
+.price-time-item .value {
+    font-size: 1rem;
+    color: var(--dark-color);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.price-time-item .value.price {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.price-time-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 1.5rem;
+    flex-shrink: 0;
+}
+
+/* ========================
+   PRICE DISCLAIMER - SERVICES PAGE
+   ======================== */
+
+.price-disclaimer-services {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: rgba(3, 169, 244, 0.06);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 1.2rem 1.8rem;
+    margin: 3rem 2rem 1rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price-disclaimer-services i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.price-disclaimer-services span {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.price-disclaimer-services strong {
+    color: var(--dark-color);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .service-price-time-bar {
+        padding: 0.9rem 1.2rem;
+    }
+
+    .price-time-item > i {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .price-time-item .value {
+        font-size: 0.95rem;
+    }
+
+    .price-time-item .value.price {
+        font-size: 1.1rem;
+    }
+
+    .price-time-divider {
+        margin: 0 1rem;
+    }
+
+    .price-disclaimer-services {
+        margin: 2rem 1rem 1rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .price-disclaimer-services span {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .service-price-time-bar {
+        padding: 0.8rem 1rem;
+        gap: 0;
+    }
+
+    .price-time-item > i {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+
+    .price-time-item .label {
+        font-size: 0.7rem;
+    }
+
+    .price-time-item .value {
+        font-size: 0.88rem;
+    }
+
+    .price-time-item .value.price {
+        font-size: 1rem;
+    }
+
+    .price-time-divider {
+        margin: 0 0.8rem;
+        height: 32px;
+    }
+
+    .price-disclaimer-services {
+        margin: 1.5rem 0.5rem 1rem;
+        padding: 0.9rem 1rem;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+}
